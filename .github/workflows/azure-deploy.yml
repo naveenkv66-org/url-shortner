@@ -12,8 +12,6 @@ on:
       - 'infrastructure/**'
   workflow_dispatch:  #manual trigger
     
-  
-
 jobs:
  deploy-dev:
    runs-on: ubuntu-latest
