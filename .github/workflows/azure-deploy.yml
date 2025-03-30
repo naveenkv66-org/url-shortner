@@ -11,7 +11,11 @@ on:
     paths:
       - 'infrastructure/**'
   workflow_dispatch:  #manual trigger
-    
+
+permissions:
+  contents: read  # Allow read access to the repository contents
+  id-token: write  # Allow write access to the ID token
+  
 jobs:
  deploy-dev:
    runs-on: ubuntu-latest

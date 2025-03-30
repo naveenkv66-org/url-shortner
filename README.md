@@ -32,5 +32,14 @@ az deployment group create --resource-group learning-urlshortner-dev --template-
 #To delete everything after testing:
 az group delete --name learning-urlshortner-dev --yes --no-wait
 
+```
+
+
+### Create User for GH Actions
 
 ```bash
+az ad sp create-for-rbac --name "GitHub-Actions-SP" --role contributor  --scopes /subscriptions/67a63877-9ecd-4d2a-b2c2-7cf4047395bb --sdk-auth
+```
+
+
+### Configure federated identity credential in app (Azure)
