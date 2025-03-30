@@ -29,7 +29,7 @@ jobs:
     - name: dotnet Publish
       run: dotnet publish ./Api/UrlShortener.Api.csproj -c Release -o ./output
     - name: Upload artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v2
       with:
         name: dotnet-artifact
         path: ./output
