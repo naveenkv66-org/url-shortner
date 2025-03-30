@@ -36,7 +36,7 @@ jobs:
       run: dotnet publish ./Api/UrlShortener.Api.csproj -c Release -o ./output
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3.1.3  # use stable version
+      uses: actions/upload-artifact@e8d49bb95d517db46f1fc31eacb61b9b68f7f6c9  # use stable version
       with:
         name: dotnet-artifact
         path: ./output
@@ -48,7 +48,7 @@ jobs:
 
     steps:
     - name: Download artifact
-      uses: actions/download-artifact@v3.0.2  # use stable version
+      uses: actions/download-artifact@2f8c4545e6cd4f6dceb89a2e1f1d6aeb80389c72 # use stable version
       with:
         name: dotnet-artifact
 
