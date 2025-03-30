@@ -15,7 +15,7 @@ on:
 permissions:
   contents: read  # Allow read access to the repository contents
   id-token: write  # Allow write access to the ID token
-  
+
 jobs:
  deploy-dev:
    runs-on: ubuntu-latest
@@ -29,7 +29,7 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }} 
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
       
       - name: Create Resource Group
         uses: azure/CLI@v2
