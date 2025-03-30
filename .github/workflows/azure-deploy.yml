@@ -27,7 +27,6 @@ jobs:
         uses: azure/login@v2.1.1
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }} 
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
       
@@ -45,4 +44,4 @@ jobs:
             echo "🚀 Deploying Bicep template..."
             az deployment group create \
               --resource-group ${{ vars.AZURE_RESOURCE_GROUP }} \
-              --template-file ./infrastructure/main.bicep
+              --template-file ./Infrastructure/main.bicep
