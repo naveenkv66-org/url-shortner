@@ -22,6 +22,9 @@ resource webApp 'Microsoft.Web/sites@2024-04-01' = {
   name: appName
   location: location
   kind: 'app,linux'
+  identity: {
+    type: 'SystemAssigned'
+  }
   properties: {
     serverFarmId: appServicePlan.id
     httpsOnly: true
@@ -45,3 +48,5 @@ resource webAppConfig 'Microsoft.Web/sites/config@2024-04-01' = {
 output appServiceId string = webApp.id
 output appServiceName string = webApp.name
 output appServicePlanId string = appServicePlan.id
+output appServicePrincipalId string = webApp.identity.principalId
+
