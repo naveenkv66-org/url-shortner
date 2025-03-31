@@ -27,7 +27,7 @@ module keyvaultRoleAssignment './modules/secrets/key-vault-role-assignment.bicep
   params: {
     keyvaultName: keyvault.outputs.keyvaultName
     principalids: [
-      apiService.outputs.appServiceId
+      apiService.outputs.appServicePrincipalId
     ]
     principalType: 'ServicePrincipal'
   }
