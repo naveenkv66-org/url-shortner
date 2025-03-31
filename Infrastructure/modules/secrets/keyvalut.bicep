@@ -3,7 +3,8 @@ param location string = resourceGroup().location
 
 
 
-resource keyvault 'Microsoft.KeyVault/vaults@2024-04-01' = {
+
+resource keyvault 'Microsoft.KeyVault/vaults@2023-07-01' = {
   name: keyvaultName
   location: location
   properties: {
